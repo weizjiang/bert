@@ -25,6 +25,7 @@ import modeling
 import optimization
 import tokenization
 import tensorflow as tf
+import random
 
 flags = tf.flags
 
@@ -405,6 +406,8 @@ class CnewsProcessor(DataProcessor):
             label = tokenization.convert_to_unicode(line[0])
             examples.append(
                 InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
+
+        random.shuffle(examples)
         return examples
 
 
