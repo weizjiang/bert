@@ -1,6 +1,6 @@
-export DATA_DIR=C:\Works\DataSet\cnews\
+export DATA_DIR=/home/jiangwei/DataSet/cnews
 
-export BERT_BASE_DIR=C:\Works\PretrainedModel\chinese_L-12_H-768_A-12\
+export BERT_BASE_DIR=/home/jiangwei/bert/chinese_L-12_H-768_A-12
 
 python3 run_classifier.py \
  --task_name=cnews \
@@ -14,7 +14,7 @@ python3 run_classifier.py \
  --max_seq_length=128 \
  --train_batch_size=32 \
  --learning_rate=2e-5 \
- --num_train_epochs=3.0 \
+ --num_train_epochs=10 \
  --output_dir=cnews_output
 
 
