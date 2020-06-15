@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-export SQUAD_DIR=/home/jiangwei/DataSet/SQuAD_2.0
+export SQUAD_DIR=/home/jiangwei/work/DataSet/SQuAD_2.0
 
-export BERT_BASE_DIR=/home/jiangwei/bert/cased_L-12_H-768_A-12
+export BERT_BASE_DIR=/home/jiangwei/work/bert/cased_L-12_H-768_A-12
 
 python3 $SQUAD_DIR/evaluate-v2.0.py $SQUAD_DIR/dev-v2.0.json ./squad2.0_output/predictions.json --na-prob-file ./squad2.0_output/null_odds.json
 
@@ -38,5 +38,6 @@ python3 run_squad.py \
   --output_dir=squad2.0_output \
   --use_tpu=False \
   --version_2_with_negative=True \
+  --do_lower_case=False \
   --null_score_diff_threshold=-1.8947529792785645
   
